@@ -32,7 +32,7 @@
  * s                   : save png
  */
 use nannou::image;
-use nannou::noise::{MultiFractal, NoiseFn, Seedable};
+use nannou::noise::{MultiFractal, NoiseFn,Perlin};
 use nannou::prelude::*;
 
 fn main() {
@@ -77,8 +77,7 @@ fn view(app: &App, model: &Model, frame: Frame) {
     frame.clear(BLACK);
 
     let win = app.window_rect();
-    let noise = nannou::noise::Fbm::new()
-        .set_seed(model.noise_random_seed)
+    let noise = nannou::noise::Fbm::<Perlin>::new(model.noise_random_seed)
         .set_octaves(model.octaves)
         .set_persistence(model.falloff as f64);
 

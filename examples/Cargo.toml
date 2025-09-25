@@ -114,9 +114,9 @@ name = "draw_transform"
 path = "draw/draw_transform.rs"
 
 # Interactive Shader Format
-[[example]]
-name = "isf_demo"
-path = "isf/isf_demo.rs"
+#[[example]]
+#name = "isf_demo"
+#path = "isf/isf_demo.rs"
 
 # Laser
 [[example]]
